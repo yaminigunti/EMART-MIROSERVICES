@@ -1,0 +1,6 @@
+package com.cts.emart.model;
+
+public enum Role {
+	BUYER,SELLER;
+
+}

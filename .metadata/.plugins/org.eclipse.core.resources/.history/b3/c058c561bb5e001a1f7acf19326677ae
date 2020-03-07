@@ -1,0 +1,5 @@
+package com.cts.emart.service;
+
+public class RegistrationService {
+
+}

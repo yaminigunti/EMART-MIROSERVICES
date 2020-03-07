@@ -1,0 +1,25 @@
+package com.cts.emart.rest;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cts.emart.service.LoginService;
+
+@RestController
+	public class LoginController {
+
+		private LoginService loginService;
+
+		
+		public LoginController(LoginService userService) {
+			super();
+			this.userService = userService;
+		}
+
+
+		@RequestMapping("/users")
+		@ResponseBody
+		@LoadBalanced
+		public Iterable<User> getAllUsers() {
+			return userService.getAllUsers();
+		}
+}

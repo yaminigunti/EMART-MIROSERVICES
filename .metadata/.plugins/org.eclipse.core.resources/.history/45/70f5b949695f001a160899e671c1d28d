@@ -1,0 +1,10 @@
+package com.cts.emart.dao;
+
+
+
+import com.cts.emart.model.Category;
+
+public interface CategoryRepository JpaRepository<Category, String > {
+    Category findByCategoryname(String categoryname); 
+
+}

@@ -1,0 +1,26 @@
+package com.cts.emart.service;
+
+import com.cts.emart.model.Login;
+
+
+	
+
+@Service
+
+public class LoginService {
+	
+	
+	public BookCatalogItem getBook() {
+		return new BookCatalogItem();
+	}
+
+	public List<Object> getAllBooks() {
+//		The URL to hit for the second micro-service
+		String urlToHit = "http://localhost:8081/info/all";
+		
+//		Call the other micro service to fetch data of all books
+		return  Arrays.asList(new RestTemplate().getForObject(urlToHit, Object[].class));
+	}
+}
+
+}

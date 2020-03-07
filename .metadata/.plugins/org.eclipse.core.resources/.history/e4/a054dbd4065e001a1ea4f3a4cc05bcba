@@ -1,0 +1,7 @@
+package com.cts.emart.service;
+
+public class LoginService {
+	
+	public Iterable<Login> getAllUsers();
+	
+}

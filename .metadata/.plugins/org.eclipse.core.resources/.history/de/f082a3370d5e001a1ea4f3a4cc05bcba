@@ -1,0 +1,33 @@
+package com.cts.emart.rest;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cts.emart.model.Register;
+
+
+
+@RestController
+
+@RequestMapping("/info")
+
+public class RegisterController {
+
+	
+@RequestMapping("/all")
+	List<Register> getAllRegisters() {
+	
+	return Arrays.asList()
+			new Register("yamini","gunti","1334576","9876543210","xyz@gmail.com","BUYER"),
+			new Register("bindu","g","13454576","9876123210","xrz@gmail.com","BUYER"));
+				
+	
+}
+	
+
+}
+
+

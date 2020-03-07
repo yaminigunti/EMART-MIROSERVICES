@@ -1,0 +1,31 @@
+package com.cts.emart.rest;
+
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cts.emart.model.Login;
+import com.cts.emart.service.LoginService;
+
+@RestController
+	public class LoginController {
+
+		private LoginService loginService;
+
+
+		public LoginController(LoginService loginService) {
+			super();
+			this.loginService = loginService;
+		}
+
+
+
+
+		@RequestMapping("/users")
+		@ResponseBody
+		@LoadBalanced
+		public Iterable<Login> getAllUsers() {
+			return loginService.getAllUsers();
+		}
+}

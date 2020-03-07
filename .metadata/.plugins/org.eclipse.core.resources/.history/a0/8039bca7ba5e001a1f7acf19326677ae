@@ -1,0 +1,5 @@
+package com.cts.emart.controller;
+
+public class RegistrationController {
+
+}
